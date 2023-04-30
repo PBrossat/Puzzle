@@ -1,5 +1,7 @@
 # Projet de synthèse d'image
 
+# MUNOZ Matéo & BROSSAT Pierrick
+
 ## Ce qui a été fait
 
 ### Fonctionnalités réalisées
