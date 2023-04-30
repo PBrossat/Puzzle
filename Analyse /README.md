@@ -5,8 +5,8 @@
 ### Fonctionnalités réalisées
 
 - Identification des différentes pièces de puzzle, grâce aux deux fonctions suivantes :
-  1- plageDeCouleurZoneInterressante(image, haut, bas, gauche, droite)
-  2- HSVtoBW(image, CouleurDominanteLAB, erreur)
+  plageDeCouleurZoneInterressante(image, haut, bas, gauche, droite)
+  HSVtoBW(image, CouleurDominanteLAB, erreur)
 
 La première fonction permet de détecter la couleur dominante d'une zone précise d'une image. Ici, l'image utilisée est au format LAB à laquelle on a appliqué un "Gaussian Blur". Dans l'appel de cette fonction, la zone intéressante est l'image entière. Celle-ci permet alors de détecter que la couleur dominante de l'image est l'orange (affichage du code couleur de celle-ci dans le terminal).
 
@@ -23,15 +23,15 @@ Pour tester ces deux fonctions, j'ai utilisé plusieurs images :
 ![Image Feuille](exemple_feuilles.jpeg)
 
 - Coloration de chaque pièce indépendamment des autres grâce à la fonction suivante:
-  - isolementPiecePuzzle(image)
+  isolementPiecePuzzle(image)
 
 Cette fonction prend en paramètre une image en noir et blanc, et "colorise" chaque composante connexe de l'image avec une couleur différente. J'ai choisi de colorier chaque pièce de puzzle avec des couleurs choisies au hasard pour un souci d'esthétisme. Evidemment, on peut changer cette partie de la fonction pour colorier les composantes connexes de l'image en niveaux de gris différent.
 
 ### Bonus réalisé
 
 - Bonus 1 : création de vignettes représentants les pièces de puzzle grâce aux deux fonctions :
-  1- trouverContour(image, imageCouleur)
-  2- recuperationPiecePuzzle(imageContour, listeImageContour, index)
+  trouverContour(image, imageCouleur)
+  recuperationPiecePuzzle(imageContour, listeImageContour, index)
 
 La première fonction permet de renvoyer : une image avec les contours des pièces de puzzle coloriés en vert ainsi qu'une liste de contours que l'on appelle contours_filtres contenant tous les contours désirables. C'est-à-dire que cette liste ne contient ni les trop petits contours (les petits points sur l'image), ni les trop gros (notamment celui qui fait tout le tour de l'image).
 
@@ -39,17 +39,17 @@ La deuxième fonction renvoie l'image unique contenant la pièce de puzzle d'ind
 
 ### Fonctions créées personnellement
 
-Fonctions permettant de trouver les contours des pièces de puzzle
-1- contourFormeColonne(image, colonne)
-2- contourFormeLigne(image, ligne)
+- Fonctions permettant de trouver les contours des pièces de puzzle
+  contourFormeColonne(image, colonne)
+  contourFormeLigne(image, ligne)
 
 Celles-ci parcourent respectivement l'image en hauteur et en largeur et détectent un changement de couleur de l'image puis colorient le pixel frontière en une couleur définie dans le corps de la fonction.
 J'ai créé ces deux fonctions avant de découvrir la fonction findContours(...) de la librairie cv2 qui me permet de faire la même chose et de renvoyer la liste des contours par la même occasion.
 Je n'utilise pas ces fonctions dans mes appels, mais je trouve pertinent le fait de vous les présenter.
 
-Fonctions permettant de redimensionner l'image
-1- resizeImage(image, gauche, droite, haut, bas)
-2- bordBlanc(imageNiveauDeGris)
+- Fonctions permettant de redimensionner l'image
+  resizeImage(image, gauche, droite, haut, bas)
+  bordBlanc(imageNiveauDeGris)
 
 La première fonction permet de redimensionner l'image grâce aux paramètres de celle-ci.
 Cette fonction est utilisée pour enlever la partie droite de l'image puzzle1.jpeg car celle-ci est inutile.
