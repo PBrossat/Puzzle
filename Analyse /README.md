@@ -1,5 +1,7 @@
 # Projet d'Analyse d'image
 
+# MUNOZ Matéo & BROSSAT Pierrick
+
 ## Ce qui a été fait
 
 ### Fonctionnalités réalisées
