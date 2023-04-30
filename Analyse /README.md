@@ -18,9 +18,9 @@ La combinaison de ces deux fonctions permet de transformer une image en couleur 
 Pour tester ces deux fonctions, j'ai utilisé plusieurs images :
 ![Image Puzzle](exemple_puzzle1.jpeg)
 
-![Image Jouets](Images/exemple_jouets.jpeg)
+![Image Jouets](exemple_jouets.jpeg)
 
-![Image Feuille](Images/exemple_feuilles.jpeg)
+![Image Feuille](exemple_feuilles.jpeg)
 
 - Coloration de chaque pièce indépendamment des autres grâce à la fonction suivante:
   - isolementPiecePuzzle(image)
